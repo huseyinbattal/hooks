@@ -18,15 +18,13 @@ function App() {
   }
 
   function lastKeyDown(e) {
-
     if (e.key === "Enter") {
       submitRef.current.focus();
     }
-
   }
 
   function submitKeyDown() {
-    alert("form submitted!")
+    alert("form submitted!");
   }
 
   return (
