@@ -1,17 +1,27 @@
-import React, { useRef } from "react";
-import TextInput from "./InputText";
-import "./App.css";
-
-function App() {
+import React, { useState } from "react";
+import "./App.css"
+import Text from "./Text"
 
 
+
+const App = () => {
+  const [dark, setDark] = useState(false);
+
+
+  const theme = {
+    backgroundColor: dark ? "black" : "#f0ffff",
+    color: dark ? "#f0ffff" : "dodgerblue",
+  
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-     
-      </header>
+    <div  className="App" style={theme}>
+     <Text/>
+      <br/>
+      <button className="darkBtn" onClick={() => {
+        setDark(dark=>!dark)
+      }}>Toogle</button>
     </div>
   );
-}
+};
 
 export default App;
